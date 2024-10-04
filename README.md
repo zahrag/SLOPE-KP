@@ -32,7 +32,7 @@ We conducted our experiments to compare four different approaches to rotation re
 <h3>Texture Prediction</h3>
 
 <div align="center">
-  <img src="images/SLOPE_KP_fig4.png" alt="Texture Reconstruction" width="800" />
+  <img src="images/SLOPE_KP_fig4.png" alt="Texture Reconstruction" />
   <p><b>Figure:</b> The first row displays original images of six different bird species from the CUB dataset. <br />
   The second row shows textures reconstructed using the SfM camera poses for rendering. <br />
   The third and fourth rows present textures reconstructed with camera poses predicted by unit quaternions and the keypoint pose trainer, respectively.</p>
@@ -41,7 +41,7 @@ We conducted our experiments to compare four different approaches to rotation re
 <h3>Mask Prediction</h3>
 
 <div align="center">
-  <img src="images/SLOPE_KP_fig5.png" alt="Mask Reconstruction" width="800" />
+  <img src="images/SLOPE_KP_fig5.png" alt="Mask Reconstruction" />
   <p><b>Figure:</b> The first row displays original RGB images of six different bird species from the CUB dataset. <br />
   The second row presents the ground-truth masks provided by the dataset. <br />
   The third row shows rendered masks using SfM camera poses. <br />
@@ -51,7 +51,7 @@ We conducted our experiments to compare four different approaches to rotation re
 <h3>Image Reconstruction</h3>
 
 <div align="center">
-  <img src="images/SLOPE_KP_fig6.png" alt="Image Reconstruction" width="1000" />
+  <img src="images/SLOPE_KP_fig6.png" alt="Image Reconstruction"/>
   <p><b>Figure:</b> The first row displays original images of ten different bird species from the CUB dataset. <br />
   The second row presents the ground-truth annotations provided by the dataset. <br />
   The third and fourth rows show the masks and textures reconstructed using camera poses predicted by keypoints. <br />
@@ -66,7 +66,7 @@ We conduct online experiments to infer 3D objects from video sequences with sing
 These bounding boxes are used to crop frames and create patches. The image patches are then input to the reconstruction network, which predicts shape, texture, and camera pose. We compare the masks reconstructed by our method and three other approaches against the ground-truth masks. Models are evaluated using three metrics: Jaccard-Mean (mean intersection over union), Jaccard-Recall (mean fraction of values exceeding a threshold), and Jaccard-Decay (performance loss over time).
 
 <div align="center">
-  <img src="images/SLOPE_KP_online.png" alt="Online Video Object Reconstruction" width="800" />
+  <img src="images/SLOPE_KP_online.png" alt="Online Video Object Reconstruction"/>
 </div>
 
 **Figure**: Online video object reconstruction framework. This example is from the YouTubeVos test set.  
