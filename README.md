@@ -38,7 +38,7 @@ We conducted our experiments to compare four different approaches to rotation re
   The third and fourth rows present textures reconstructed with camera poses predicted by unit quaternions and the keypoint pose trainer, respectively.</p>
 </div>
 
-<h3>Mask Reconstruction</h3>
+<h3>Mask Prediction</h3>
 
 <div align="center">
   <img src="images/SLOPE_KP_fig5.png" alt="Mask Reconstruction" width="800" />
