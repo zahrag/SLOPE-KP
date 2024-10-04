@@ -1,0 +1,150 @@
+ConfigBase:
+  dataset_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/dataset'
+  output_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/codes/output'
+  shape_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/dataset/template_shape/bird_template.npy'
+  pretrained_model_path: ''
+  pretrained_multiplex_path: ''
+
+  img_size: 256
+  BGR_MEAN: [0.485, 0.456, 0.406]
+  BGR_STD: [0.229, 0.224, 0.225]
+
+
+ConfigDataloader:
+  dataset: 'CUB_200_2011'
+  split: 'train'
+  batch_size: 12
+  n_data_workers: 4
+  shuffle: true
+  pin_memory: true
+  drop_last_batch: false
+  dataloader_computeMaskDt: true
+  cameraPoseDict_isCamPose: true
+  use_cameraPoseDict_as_gt: false
+  cameraPoseDict: ""                      # Path to a camera components dictionary of the entire dataset for supervision.
+  cameraPoseDict_mergewith: ""            # Path to camera components dictionaries of the entire dataset to merge with.
+  single_datapoint: ""
+
+
+ConfigAugmentation:
+  rngFlip: 0
+  flip: true
+  jitter_frac: 0.05
+  padding_frac: 0.05
+  tight_crop: false
+  occlusion: false
+  occlude_prob: 0.0
+  occlude_min_area: 0.0
+  occlude_max_area: 0.0
+  occlude_min_aspect_ratio: 0.0
+  occlude_mean: 0.0
+  flip_train: false
+
+ConfigMultiplex:
+  num_multiposeAz: 8
+  num_multiposeEl: 5
+  num_multiposeCr: 1
+  rotation2quaternion: 'euler'       # Options: 'euler', 'gram-schmidt', 'svd'
+  initial_quat_bias_deg: 90.0
+  scale_bias: 0.8
+  baseQuat_biasEl: 0
+  baseQuat_biasAz: 0
+  quatScorePeakiness: 20.0
+  optimizeAzRange: 30.0
+  optimizeElRange: 30.0
+  optimizeCrRange: 60.0
+  cameraPoseDict: ""        # Path to an existing camera components dictionary of the entire dataset to optimize.
+  use_gt_camera: true       # No multiplex optimization: Supervise pose net using gt-camera (SfM or multiplex best cam)
+
+
+ConfigRenderer:
+  method: 'nmr'                       # Options: 'nmr', 'softras'
+  perspective: false
+  softras_sigma: 1e-5
+  softras_gamma: 1e-4
+  mask_light_intensity_ambient: 1.0
+  mask_light_intensity_directionals: 0.0
+  texture_flipCam: false
+
+ConfigNet:
+  nz_feat: 200
+  pred_pose: true
+  pred_shape: true
+  pred_texture: true
+
+ConfigShape:
+  symmetric_mesh: true                # Mesh symmetry is parametrized
+  symmetric: true                     # Use symmetric mesh
+
+ConfigPose:
+  pred_pose_quat: true
+  pred_pose_gramschmidt: false
+  pred_pose_svd: false
+  pred_pose_keypoint: false
+  num_keypoints: 32
+  transformer: false
+  robust: true
+  end2end: false
+  perspective: false
+
+ConfigTexture:
+  pred_texture: false
+  textureImgCustomDimension: false
+  textureImgH: 256
+  textureImgW: 256
+  texture_use_conv_featz: true
+  textureUnwrapUV: false
+  texture_uvshift: true
+  texture_predict_flow: false
+  texture: true
+  tex_size: 6
+  SPADE_spectral_norm: false
+  SPADE_configstr: 'spadebatch3x3'
+  SPADE_upsamplingmethod: 'bilinear'           # Options: 'nearest', 'bilinear'
+
+ConfigLoss:
+  quatScorePeakiness: 20.0
+  mask_loss_wt: 10.0
+  deform_loss_wt: 1.0
+  laplacian_loss_wt: 0.0
+  meanV_laplacian_loss_wt: 0.0
+  deltaV_laplacian_loss_wt: 0.0
+  graphlap_loss_wt: 0.5
+  edge_loss_wt: 0.0
+  texture_loss_wt: 1.0
+  camera_loss_wt: 0.0
+  laplacianDeltaV: true
+  texture_flipCam: false
+  apply_texture_loss: true
+  apply_mask_loss: true
+  apply_shape_loss: true
+  apply_pose_loss: true
+  apply_heatmap_loss: false
+  apply_quat_scores: true
+  apply_multiplex_loss: false
+  apply_balanced_multiplex_loss: true
+  apply_multiplex_quat_error: true
+  apply_network_quat_error: true
+
+ConfigOptimizer:
+  optimizer: 'adam'
+  learning_rate: 0.0001
+  beta: 0.9
+  mp_optimizer: 'adam'
+  mp_learning_rate: 0.0001
+  mp_beta: 0.9
+  optimizeSteps: 150
+  optimizeMomentum: 0.0
+  optimizeScale: true
+  optimizeTrans: true
+  optimizeAz: true
+  optimizeEl: true
+  optimizeCyRot: true
+  lossToScorePower: 1.0
+
+ConfigLearning:
+  seed: 0
+  is_training: true
+  learn_multiplex: true
+  max_epoch: 100
+  save_interval: 1
