@@ -79,7 +79,7 @@ We conducted our experiments to compare four different approaches to rotation re
             The fifth row depicts the 3D shape reconstructed from the camera pose predictions
 
 
-### Online Inference 3D Object Reconstruction from Videos
+## Online Inference 3D Object Reconstruction from Videos
 
 We conduct online experiments to infer 3D objects from video sequences with single and multiple objects per image, 
 using the YouTubeVos and Davis datasets [Xu et al. (2018)](https://arxiv.org/abs/1809.03327), 
