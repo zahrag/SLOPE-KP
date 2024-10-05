@@ -115,3 +115,15 @@ The third row shows the reconstructed shape and texture.
             The second row presents image patches cropped using the bounding box dimensions predicted by the LWL tracker.
             The third and fourth rows show reconstructed textures and masks obtained using a 3D object reconstruction model,
             where keypoint correspondences are used to predict the camera poses capturing the images.
+
+Instructions
+--------
+To get started with this project, first, recursively clone the repository along with its linked dependencies (submodules):
+
+```bash
+git clone --recursive git@github.com:zahrag/SLOPE-KP.git
+cd SLOPE-KP
+```
+
+Next please follow the [instructions](https://github.com/shubham-goel/ucmr/blob/master/docs/installation.md) to install 
+additional dependencies PyMesh, SoftRas and NMR. The conda
