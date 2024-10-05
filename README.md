@@ -169,7 +169,8 @@ Download CUB-200-2011 images:
 wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz && tar -xf CUB_200_2011.tgz
 ```
 
-Access the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) annotation files and template meshes through **data** directory.
+Access the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) annotation files and template meshes through 
+the **data** directory.
 
 
 ### Acknowledgements
