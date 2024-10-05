@@ -172,6 +172,11 @@ wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz 
 Access the annotation files, the split, and the template for the category-specific mean shape used in our experiments, 
 similar to the ucmr project, via the **data** directory.
 
+### Experiments
+After configuring the experiment hyperparameters in **codes/configs/configs.yaml**, run `run_init_multiplex.py` to 
+initialize and optimize the camera multiplex. Then, utilize `run_composite_model.py` to train the shape, texture, and pose of the object. 
+This repository supports four different approaches to pose prediction.
+
 ## Acknowledgements
 We acknowledge the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) for providing integral code elements utilized in our work.
 
