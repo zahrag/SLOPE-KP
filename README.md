@@ -161,7 +161,7 @@ Alternatively, you can use the provided `environment.yaml` file to install all r
 conda env create -f environment.yaml
 ```
 
-### Dataset and Annotations
+### Dataset 
 
 Download CUB-200-2011 images:
 
@@ -169,6 +169,7 @@ Download CUB-200-2011 images:
 wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz && tar -xf CUB_200_2011.tgz
 ```
 
+### Annotations
 Access the annotation files, the split, and the template for the category-specific mean shape used in our experiments, 
 similar to the ucmr project, via the **data** directory.
 
