@@ -19,7 +19,7 @@ We conducted our experiments to compare four different approaches to rotation re
 - The third is special orthogonalization using SVD based on 9D rotation representation. 
 - The fourth is our novel approach to camera pose prediction, which trains an intermediate **keypoint prediction network**.
 
-# Table of 3D Object Reconstruction Results
+### Table of 3D Object Reconstruction Results
 
 Table 1: The results of a single 3D object reconstruction presented by mean intersection over union (Mean-IoU) and 3D-Angular-Error calculated for the CUB test set when predicting camera pose by four different approaches: unit quaternions, Gram-Schmidt, special orthogonalization, and keypoint prediction. Note that the category-specific mesh reconstruction network CMR had a 3D-Angular error equal to 87.52° when no viewpoint and keypoint supervision are used.
 
@@ -86,7 +86,7 @@ We conduct online experiments to infer 3D objects from video sequences with sing
 
 These bounding boxes are used to crop frames and create patches. The image patches are then input to the reconstruction network, which predicts shape, texture, and camera pose. We compare the masks reconstructed by our method and three other approaches against the ground-truth masks. Models are evaluated using three metrics: Jaccard-Mean (mean intersection over union), Jaccard-Recall (mean fraction of values exceeding a threshold), and Jaccard-Decay (performance loss over time).
 
-# Table 2: Davis Jaccard Mean, Recall, and Decay for the YouTubeVos and Davis Datasets
+### Table 2: Davis Jaccard Mean, Recall, and Decay for the YouTubeVos and Davis Datasets
 
 All birds are detected and tracked by the LWL tracker, and the corresponding image is cropped using the bounding box predicted by the tracker for each bird. The cropped patch is processed by a pretrained mesh reconstruction model for camera pose prediction, solving the perspective-n-point problem by employing keypoint correspondences.
 
@@ -117,11 +117,11 @@ The third row shows the reconstructed shape and texture.
             where keypoint correspondences are used to predict the camera poses capturing the images.
 
 
-# Getting Started with SLOPE-KP
+## Getting Started with SLOPE-KP
 
 To set up the SLOPE-KP project, follow the steps below:
 
-## Clone the Repository
+### Clone the Repository
 
 First, recursively clone the repository along with its linked dependencies (submodules):
 
@@ -130,7 +130,7 @@ git clone --recursive git@github.com:zahrag/SLOPE-KP.git
 cd SLOPE-KP
 ```
 
-## Install Dependencies
+### Install Dependencies
 
 Next, please follow the installation [instructions](https://github.com/shubham-goel/ucmr/blob/master/docs/installation.md) 
 to install the additional dependencies: **PyMesh**, **SoftRas**, and **NMR**.
