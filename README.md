@@ -46,7 +46,7 @@ We conducted our experiments to compare four different approaches to rotation re
 <h3>3D Shape Prediction</h3>
 
 <div align="center">
-  <img src="images/SLOPE_KP_fig3.png" alt="3D Shape Reconstruction" width="500" />
+  <img src="images/SLOPE_KP_fig3.png" alt="3D Shape Reconstruction" />
 </div>
 
 **Figure 2**:The first row displays the original images of nine different bird species from the CUB dataset. <br />
