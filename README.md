@@ -19,6 +19,20 @@ We conducted our experiments to compare four different approaches to rotation re
 - The third is special orthogonalization using SVD based on 9D rotation representation. 
 - The fourth is our novel approach to camera pose prediction, which trains an intermediate **keypoint prediction network**.
 
+# Table of 3D Object Reconstruction Results
+
+Table 1: The results of a single 3D object reconstruction presented by mean intersection over union (Mean-IoU) and 3D-Angular-Error calculated for the CUB test set when predicting camera pose by four different approaches: unit quaternions, Gram-Schmidt, special orthogonalization, and keypoint prediction. Note that the category-specific mesh reconstruction network CMR had a 3D-Angular error equal to 87.52° when no viewpoint and keypoint supervision are used.
+
+| Method | Mean-IoU &#8593; | 3D-Angular-Error &#8595; |
+| --- | --- | --- |
+| Quaternion [Goel et. al (2020)](https://arxiv.org/abs/2007.10982) | 0.62 | 45.5° |
+| Gram-Schmidt [Zhou et. al (2020)](https://arxiv.org/abs/1812.07035) | 0.55 | 60.4° |
+| SVD [Levinson et. al (2020)](https://arxiv.org/abs/2006.14616) | 0.58 | 50.8° |
+| **Keypoint (ours)** | **0.70** | **40.5°** |
+
+> **Note**: The arrows next to the column headers indicate the direction of improvement (upward for Mean-IoU and downward for 3D-Angular-Error).
+
+
 <h3>3D Shape Prediction</h3>
 
 <div align="center">
@@ -71,6 +85,19 @@ We conducted our experiments to compare four different approaches to rotation re
 We conduct online experiments to infer 3D objects from video sequences with single and multiple objects per image, using the YouTubeVos and Davis datasets [Xu et al. (2018)](https://arxiv.org/abs/1809.03327), focusing on the bird category. Inferring objects from video sequences is challenging due to varying positions, orientations, and occlusions. We use LWL [Bhat et al. (2020)](https://arxiv.org/abs/2003.11540) to compute bounding boxes from the predicted masks.
 
 These bounding boxes are used to crop frames and create patches. The image patches are then input to the reconstruction network, which predicts shape, texture, and camera pose. We compare the masks reconstructed by our method and three other approaches against the ground-truth masks. Models are evaluated using three metrics: Jaccard-Mean (mean intersection over union), Jaccard-Recall (mean fraction of values exceeding a threshold), and Jaccard-Decay (performance loss over time).
+
+# Table 2: Davis Jaccard Mean, Recall, and Decay for the YouTubeVos and Davis Datasets
+
+All birds are detected and tracked by the LWL tracker, and the corresponding image is cropped using the bounding box predicted by the tracker for each bird. The cropped patch is processed by a pretrained mesh reconstruction model for camera pose prediction, solving the perspective-n-point problem by employing keypoint correspondences.
+
+| Method | Jaccard-Mean &#8593; | Jaccard-Recall &#8593; | Jaccard-Decay &#8595; |
+| --- | --- | --- | --- |
+| Quaternion [Goel et. al (2020)](https://arxiv.org/abs/2007.10982) | 0.45 | 0.48 | 0.020 |
+| Gram-Schmidt [Zhou et. al (2020)](https://arxiv.org/abs/1812.07035) | 0.40 | 0.27 | 0.007 |
+| SVD [Levinson et. al (2020)](https://arxiv.org/abs/2006.14616) | 0.44 | 0.43 | 0.028 |
+| **Keypoint (ours)** | **0.45** | **0.53** | **0.018** |
+
+> **Note**: The arrows next to the column headers indicate the direction of improvement (upward for Jaccard-Mean and Jaccard-Recall, and downward for Jaccard-Decay).
 
 <div align="center">
   <img src="images/SLOPE_KP_online.png" alt="Online Video Object Reconstruction"/>
