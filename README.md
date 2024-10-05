@@ -50,8 +50,8 @@ We conducted our experiments to compare four different approaches to rotation re
 </div>
 
 **Figure 2**:The first row displays the original images of nine different bird species from the CUB dataset. <br />
-  The second row presents the 3D meshes reconstructed using the ground-truth camera poses provided by the dataset through Structure from Motion (SfM). <br />
-  The third row showcases the 3D shapes reconstructed when camera poses are predicted using unit quaternions. <br />
+  The second row presents the 3D meshes reconstructed using the ground-truth SfM camera poses. <br />
+  The third row showcases the 3D shapes reconstructed when camera poses, which are predicted using unit quaternions. <br />
   Finally, the fourth row illustrates the 3D shapes obtained using camera poses predicted from keypoint correspondences.</p>
 
 
@@ -63,7 +63,8 @@ We conducted our experiments to compare four different approaches to rotation re
 
 **Figure 3**: The first row displays original images of six different bird species from the CUB dataset. <br />
   The second row shows textures reconstructed using the SfM camera poses for rendering. <br />
-  The third and fourth rows present textures reconstructed with camera poses predicted by unit quaternions and the keypoint pose trainer, respectively.</p>
+  The third and fourth rows present textures reconstructed with camera poses predicted by 
+  unit quaternions and the keypoint pose trainer, respectively.</p>
 
 
 <h3>Mask Prediction</h3>
@@ -75,7 +76,8 @@ We conducted our experiments to compare four different approaches to rotation re
 **Figure 4**:The first row displays original RGB images of six different bird species from the CUB dataset. <br />
   The second row presents the ground-truth masks provided by the dataset. <br />
   The third row shows rendered masks using SfM camera poses. <br />
-  The fourth and fifth rows depict reconstructed masks using camera poses predicted by unit quaternions and keypoint correspondences, respectively.</p>
+  The fourth and fifth rows depict reconstructed masks using camera poses predicted by 
+   unit quaternions and keypoint correspondences, respectively.</p>
 
 
 <h3>Image Reconstruction</h3>
@@ -86,8 +88,9 @@ We conducted our experiments to compare four different approaches to rotation re
 
 **Figure 5**: The first row displays original images of ten different bird species from the CUB dataset. <br />
             The second row presents the ground-truth annotations provided by the dataset. <br />
-            The third and fourth rows show the masks and textures reconstructed using camera poses predicted by keypoints. <br />
-            The fifth row depicts the 3D shape reconstructed from the camera pose predictions
+            The third and fourth rows show the masks and textures reconstructed using camera poses predicted by 
+            our keypoints model. <br />
+            The fifth row depicts the 3D shape reconstructed from the camera pose predictions.
 
 
 ## Online Inference 3D Object Reconstruction from Videos
@@ -133,7 +136,7 @@ The third row shows the reconstructed shape and texture.
 
 **Figure 7**: The first row displays original images of 10 birds from the YouTubeVos and Davis video sequences.
             The second row presents image patches cropped using the bounding box dimensions predicted by the LWL tracker.
-            The third and fourth rows show reconstructed textures and masks obtained using a 3D object reconstruction model,
+            The third and fourth rows show reconstructed textures and masks obtained using our 3D object reconstruction model,
             where keypoint correspondences are used to predict the camera poses capturing the images.
 
 
