@@ -130,7 +130,7 @@ git clone --recursive git@github.com:zahrag/SLOPE-KP.git
 cd SLOPE-KP
 ```
 
-## Install Additional Dependencies
+## Install Dependencies
 
 Next, please follow the installation [instructions](https://github.com/shubham-goel/ucmr/blob/master/docs/installation.md) 
 to install the additional dependencies: **PyMesh**, **SoftRas**, and **NMR**.
