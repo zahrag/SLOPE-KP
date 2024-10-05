@@ -169,9 +169,8 @@ Download CUB-200-2011 images:
 wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz && tar -xf CUB_200_2011.tgz
 ```
 
-Access the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) annotation files and template meshes through 
-the **data** directory.
-
+Access the annotation files, the split, and the template for the category-specific mean shape used in our experiments, 
+similar to the UCMR project, via the **data** directory.
 
 ### Acknowledgements
 We acknowledge the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) for providing integral code elements utilized in our work.
