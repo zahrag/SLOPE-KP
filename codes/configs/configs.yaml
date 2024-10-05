@@ -1,7 +1,7 @@
 ConfigBase:
-  dataset_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/dataset'
-  output_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/codes/output'
-  shape_path: '/home/zahra/Desktop/3dproject/github_slope_kp/SLOPE-KP/dataset/template_shape/bird_template.npy'
+  dataset_path: ''
+  output_path: ''
+  shape_path: '.../dataset/template_shape/bird_template.npy'
   pretrained_model_path: ''
   pretrained_multiplex_path: ''
 
