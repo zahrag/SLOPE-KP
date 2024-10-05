@@ -116,14 +116,27 @@ The third row shows the reconstructed shape and texture.
             The third and fourth rows show reconstructed textures and masks obtained using a 3D object reconstruction model,
             where keypoint correspondences are used to predict the camera poses capturing the images.
 
-Instructions
---------
-To get started with this project, first, recursively clone the repository along with its linked dependencies (submodules):
+
+# Getting Started with SLOPE-KP
+
+To set up the SLOPE-KP project, follow the steps below:
+
+## Clone the Repository
+
+First, recursively clone the repository along with its linked dependencies (submodules):
 
 ```bash
 git clone --recursive git@github.com:zahrag/SLOPE-KP.git
 cd SLOPE-KP
 ```
 
-Next please follow the [instructions](https://github.com/shubham-goel/ucmr/blob/master/docs/installation.md) to install 
-additional dependencies PyMesh, SoftRas and NMR. The conda
+## Install Additional Dependencies
+
+Next, please follow the installation [instructions](https://github.com/shubham-goel/ucmr/blob/master/docs/installation.md) 
+to install the additional dependencies: **PyMesh**, **SoftRas**, and **NMR**.
+
+Alternatively, you can use the provided `environment.yaml` file to install all required packages by running:
+
+```bash
+conda env create -f environment.yaml
+```
