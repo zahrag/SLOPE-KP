@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="images/slope_kp.png" alt="SLOP-KP: Self-supervised Learning of Object Pose Estimation Using Keypoint Prediction." />
-  <p><b>Figure 1:</b> A BIOSCAN-5M dataset sample with multimodal data types.
+  <p><b>Figure 1:</b> SLOP-KP: Self-supervised Learning of Object Pose Estimation Using Keypoint Prediction.
 </div>
 
 
