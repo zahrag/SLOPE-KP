@@ -21,12 +21,7 @@ We conducted our experiments to compare four different approaches to rotation re
 
 # Table of 3D Object Reconstruction Results
 
-
-<p align="center">
 Table 1: The results of a single 3D object reconstruction presented by mean intersection over union (Mean-IoU) and 3D-Angular-Error calculated for the CUB test set when predicting camera pose by four different approaches: unit quaternions, Gram-Schmidt, special orthogonalization, and keypoint prediction. Note that the category-specific mesh reconstruction network CMR had a 3D-Angular error equal to 87.52° when no viewpoint and keypoint supervision are used.
-</p>
-
-<p align="center">
 
 | Method | Mean-IoU &#8593; | 3D-Angular-Error &#8595; |
 | --- | --- | --- |
@@ -35,11 +30,7 @@ Table 1: The results of a single 3D object reconstruction presented by mean inte
 | SVD [Levinson et. al (2020)](https://arxiv.org/abs/2006.14616) | 0.58 | 50.8° |
 | **Keypoint (ours)** | **0.70** | **40.5°** |
 
-</p>
-
-<p align="center">
-**Note**: The arrows next to the column headers indicate the direction of improvement (upward for Mean-IoU and downward for 3D-Angular-Error).
-</p>
+> **Note**: The arrows next to the column headers indicate the direction of improvement (upward for Mean-IoU and downward for 3D-Angular-Error).
 
 
 <h3>3D Shape Prediction</h3>
