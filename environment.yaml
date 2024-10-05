@@ -1,7 +1,7 @@
 name: slope-kp
 channels:
   - conda-forge
-  - pip
+  - defaults
 dependencies:
   - _anaconda_depends=2022.10=py37_2
   - _libgcc_mutex=0.1=conda_forge
