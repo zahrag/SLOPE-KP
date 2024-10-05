@@ -174,6 +174,6 @@ Download [ucmr](https://github.com/shubham-goel/ucmr/tree/master) annotation fil
 wget https://people.eecs.berkeley.edu/~shubham-goel/projects/ucmr/cachedir.tar.gz && tar -vzxf cachedir.tar.gz
 ```
 
-#### Acknowledgements
+### Acknowledgements
 We acknowledge the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) for providing integral code elements utilized in our work.
 
