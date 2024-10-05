@@ -1,6 +1,6 @@
 """
 Taken from Goel et al., "ucmr" GitHub, https://github.com/shubham-goel/ucmr
-Modified by Zahra Gharaee to adjust for a later version of the renderer.
+Modified to adapt to a later version of the renderer.
 """
 
 from __future__ import absolute_import, division, print_function

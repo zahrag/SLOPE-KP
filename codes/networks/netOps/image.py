@@ -1,6 +1,6 @@
 """
 Taken from Goel et al., "ucmr" GitHub, https://github.com/shubham-goel/ucmr
-Function added for SLOPE-KP by Zahra Gharaee.
+Functions added for SLOPE-KP.
 """
 from __future__ import absolute_import, division, print_function
 

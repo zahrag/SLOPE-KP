@@ -226,8 +226,8 @@ class GramSchmidtQuat:
 
 class SVDQuat:
     '''
-    This class creates rotation using special orthogonalization using SVD.
-    outputs camera_bx7 [scale, trans_x, trans_y, quat (4D)]
+    This class creates rotation using special orthogonalization using SVD (https://github.com/naver/roma).
+    outputs camera_bx7 [quat (4D)]
     '''
 
     def tranform(self, rot, base_quat=None):
@@ -237,7 +237,6 @@ class SVDQuat:
         :return: Quaternions: (N, 4)
         """
         M = rot.view(-1, 3, 3)
-        # R = roma.special_procrustes(M, epsilon=0)
         R = self.special_procrustes(M)
         assert roma.is_rotation_matrix(R, epsilon=1e-5)
         # print('R shape', R.shape)
@@ -262,7 +261,7 @@ class SVDQuat:
         """
         M, batch_shape = self.flatten_batch_dims(M, -3)
         R = _ProcrustesManualDerivatives.apply(M, force_rotation, gradient_eps)
-        # return self.unflatten_batch_dims(R, batch_shape)
+        # R = self.unflatten_batch_dims(R, batch_shape)
         return R
 
     def special_procrustes(self, M, gradient_eps=1e-5):
@@ -327,7 +326,8 @@ class _ProcrustesManualDerivatives(torch.autograd.Function):
                 flip = (torch.det(U) * torch.det(V) < 0)
                 # flip = (fast_det_3x3(U) * fast_det_3x3(V) < 0)
             if torch.is_grad_enabled():
-                # This is needed to avoid a runtime error "one of the variables needed for gradient computation has been modified by an inplace operation"
+                # This is needed to avoid a runtime error "one of the variables needed for gradient
+                # computation has been modified by an inplace operation"
                 SVt = DVt.clone()
             SVt[flip, -1, :] *= -1
         else:
