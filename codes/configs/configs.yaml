@@ -1,7 +1,7 @@
 ConfigBase:
   dataset_path: ''
   output_path: ''
-  shape_path: '.../dataset/template_shape/bird_template.npy'
+  shape_path: '.../data/template_shape/bird_template.npy'
   pretrained_model_path: ''
   pretrained_multiplex_path: ''
 
