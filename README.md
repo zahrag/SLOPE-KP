@@ -13,6 +13,17 @@ which outlines advancements in predicting both object pose (camera perspective) 
 The key innovation is a novel approach to predicting camera pose using self-supervised learning of keypoints—specific 
 points located on a deformable shape that is typical for a particular object category (like birds, cars, etc.).
 
+If you make use of the SLOPE-KP and/or this code repository, please cite the following [paper](https://arxiv.org/abs/2302.07360):
+
+```bibtex
+@article{gharaee2023self,
+  title={Self-supervised learning of object pose estimation using keypoint prediction},
+  author={Gharaee, Zahra and Lawin, Felix J{\"a}remo and Forss{\'e}n, Per-Erik},
+  journal={arXiv preprint arXiv:2302.07360},
+  year={2023}
+}
+```
+
 We conducted our experiments to compare four different approaches to rotation representation. 
 - The first is to predict 4D unit quaternions by a CNN.
 - The second is 6D rotation representation mapped onto SO(3) via a partial Gram-Schmidt procedure.
