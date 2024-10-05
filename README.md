@@ -160,3 +160,20 @@ Alternatively, you can use the provided `environment.yaml` file to install all r
 ```bash
 conda env create -f environment.yaml
 ```
+
+### Dataset and Annotations
+
+Download CUB-200-2011 images:
+
+```bash
+wget http://www.vision.caltech.edu/visipedia-data/CUB-200-2011/CUB_200_2011.tgz && tar -xf CUB_200_2011.tgz
+```
+
+Download [ucmr](https://github.com/shubham-goel/ucmr/tree/master) annotation files and template meshes as follows:
+```bash
+wget https://people.eecs.berkeley.edu/~shubham-goel/projects/ucmr/cachedir.tar.gz && tar -vzxf cachedir.tar.gz
+```
+
+#### Acknowledgements
+We acknowledge the [ucmr](https://github.com/shubham-goel/ucmr/tree/master) for providing integral code elements utilized in our work.
+
